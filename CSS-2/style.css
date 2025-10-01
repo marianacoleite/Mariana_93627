@@ -1,0 +1,90 @@
+/*Criando o menu estilizado simples*/
+
+nav{
+
+    background-color: #BDC;
+    margin-left: 22px;
+    margin-right: 30px;
+
+}
+
+ul{
+    
+    /*Alinha os itens na horizontal*/
+
+    display: flex;
+}
+
+li{
+    /*Tira as bolinhas dos itens */
+    list-style: none;
+    padding: 20px;
+
+}
+
+a{
+    /*Tira o sublinhado do link*/
+    text-decoration: none;
+    color: azure;
+    font-weight: bold;
+    font-size: 22pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a:hover{
+    color: black;
+    text-decoration: overline;
+    background-color: antiquewhite;
+    padding: 50px;
+    
+}
+
+h2{
+    padding: 15px;
+    margin-left: 22px;
+    margin-right: 80px;
+    background-color: #BDC;
+    color: azure;
+    border: 1px solid rgb(252, 252, 252);
+    font-size: 22pt;
+}
+
+img{
+    /*Largura*/
+    width: 600px;
+
+    /*Altura*/
+    height: 400px;
+    padding-left: 100px;
+    padding-top: 30px;
+    
+}
+
+div{
+    display:flex ;
+}
+
+p{
+    margin-right: 70px;
+    text-align: justify;
+    margin-left: 60px;
+    margin-top: 25px;
+}
+
+footer{
+
+    background-color: #BDC;
+    margin-left: 22px;
+    margin-right: 80px;
+    
+}
+
+h3{
+    padding-top: 10px;
+    color: azure;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 13px;
+    /*Bottom é pra baixo*/
+    
+}
