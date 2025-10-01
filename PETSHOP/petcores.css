@@ -1,0 +1,43 @@
+.logo img{
+    width: 10%;
+    height: 50%;
+    padding-left: 850px;
+    padding-top: 80px;
+}
+
+header{
+    background-color: rgb(246, 250, 28);
+    /*Para faze a borda em baixo // Tamanho, Tipo, Cor*/
+    border-bottom: 4px solid #ff9900;
+    
+   
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+
+}
+
+li{
+  list-style: none;
+  padding: 40px;
+  
+  
+}
+
+a{
+    /*Tira o sublinhado do link*/
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 15pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a:hover{
+    text-align: center;
+    text-decoration: overline;
+}
+
+
