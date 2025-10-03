@@ -40,4 +40,56 @@ a:hover{
     text-decoration: overline;
 }
 
+.banner{
+    width: 100%;
+    
+}
 
+.titulo {
+    position: absolute;
+    display: inline-block;
+    top:680px;
+    padding-left: 750px;
+    padding-right: 775px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 13pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    
+}
+
+
+.cachorro img{
+  background-color: black;
+  display: block;
+  width: 100%;
+  height: 650px;
+  padding: 0;
+ 
+}
+
+
+
+section h2,p {
+    display: inline-flexbox;
+    text-align: center;
+    padding: 50px;
+    margin-top: 10px;
+
+    
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 4px solid #ff9900;
+    background-color: yellow;
+    font-family: sans-serif;
+    font-size: 9pt;
+}
+
+h4{
+    
+}
