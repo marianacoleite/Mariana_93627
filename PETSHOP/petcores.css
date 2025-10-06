@@ -3,12 +3,13 @@
     height: 50%;
     padding-left: 680px;
     padding-top: 80px;
+    
 }
 
 header{
-    background-color: rgb(246, 250, 28);
+    background-color:#0096c7;
     /*Para faze a borda em baixo // Tamanho, Tipo, Cor*/
-    border-bottom: 4px solid #ff9900;
+    border-bottom: 4px solid #023e8a;
   
 }
 
@@ -44,18 +45,7 @@ a:hover{
     
 }
 
-.titulo {
-    position: absolute;
-    display: inline-block;
-    top:680px;
-    padding-left: 750px;
-    padding-right: 775px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 13pt;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
-    
-}
+
 
 
 .cachorro img{
@@ -67,15 +57,27 @@ a:hover{
  
 }
 
-
-
-section h2,p {
-    display: inline-flexbox;
+h1{
+    position: absolute;
+    top: 680px;
+    left: 150px;
+    right: 150px;
     text-align: center;
-    padding: 50px;
-    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 31pt;
+ 
+}
 
-    
+
+.info{
+    background-color: rgb(255, 255, 255);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #084ba3;
+    font-size: 13pt;
 }
 
 footer{
@@ -83,8 +85,8 @@ footer{
     padding: 10px;
     margin-top: 0px;
     padding-top: 0px;
-    border-top: 4px solid #ff9900;
-    background-color: yellow;
+    border-top: 4px solid #023e8a;
+    background-color: #0096c7;
     font-family: sans-serif;
     font-size: 9pt;
 }
