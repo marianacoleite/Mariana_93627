@@ -1,0 +1,11 @@
+h1{
+    display: flex;
+    background-color: rgb(207, 101, 30);
+    width: 120px;
+    padding: 120px;
+}
+
+h2{
+    display: flex;
+    background-color: aquamarine;
+}
