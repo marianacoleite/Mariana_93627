@@ -17,30 +17,96 @@ h1{
     color: white;
 }
 
-bt1{
-    display: inline-block;
-    background-color: rgb(207, 21, 21);
+.botao{
+    background-color: rgb(222, 30, 30);
     color: white;
-   padding: 15px;
-   border: 12px;
-   border-radius: 5px;
-   left: 10px;
-   
+    border: 1px;
+    padding: 5px 30px;
+    border-radius: 10px;
+
 }
+
 
 .plano{
     display: flex;
-    background-color: rgb(133, 182, 85);
-    padding-top: 300px;
+    background-color: rgb(245, 247, 243);
+    padding-top: 150px;
 }
 
+.popular{
+    position: relative;
+    display: inline-block;
+    height: 35px;
+    padding-left: 40px;
+    padding-right: 40px;
+   padding-bottom: 5px;
+    left: 140px;
+    bottom: 70px;
+    background-color: yellow;
+    border-radius: 5px;
+    
+
+}
+
+.premium{
+
+}
+
+  
 
 
 .basico{
-    
-    display: block;
+    display: inline-block;
+    flex-direction: row;
+    margin: 10px;
+    margin-left: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 60px;
+    padding-bottom: 60px;
+    background-color: #7053f0;
+    position: relative;
+}
+
+.bt, .bt1, .bt2{
+    background-color: rgb(44, 184, 23);
+    color: white;
+    border: 1px;
+    padding: 5px 30px;
+    border-radius: 10px;
+}
+
+
+.intermediario{
+    display: inline-block;
+    margin: 10px;
+    margin-bottom: 60px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 60px;
+    padding-bottom: 60px;
+
     background-color: blanchedalmond;
     position: relative;
+
+}
+
+
+.avancado{
+    display: inline-block;
+    margin: 10px;
+    margin-right: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 60px;
+    padding-bottom: 60px;
+    padding-right: 19px;
+
+    background-color: blanchedalmond;
+    position: relative;
+
 }
 
 
