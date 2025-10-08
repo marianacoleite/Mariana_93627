@@ -1,7 +1,7 @@
 .logo img{
     width: 10%;
     height: 50%;
-    padding-left: 680px;
+    padding-left: 850px;
     padding-top: 80px;
     
 }
@@ -47,30 +47,73 @@ h1{
     color: #023e8a;
 }
 
-.formulario{
-    display: inline-flexbox;
-    margin-left: 600px;
-    width: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+.form{
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  background-color: #f4f7f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
     
 }
 
-.formulario input{
-    width: 300px;
-    left: 60px;
-    margin: 10px;
-    
+.form label{
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+
     
 }
 
-.formulario label{
-    margin: 100px;
-    display: inline-flexbox;
-    
-    
+.form input, .form textarea{
+    width: 100%;       /* Ocupa toda a largura do container */
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
 }
 
+.form button {
+  margin-top: 15px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #e67e22;
+}
+
+.whatsapp {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.whatsapp a {
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.whatsapp a:hover {
+  background-color: #1ebe57;
+}
 
 
 
