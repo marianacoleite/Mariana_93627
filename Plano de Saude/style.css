@@ -34,22 +34,32 @@ h1{
 }
 
 .popular{
-    position: relative;
-    display: inline-block;
-    height: 35px;
-    padding-left: 40px;
-    padding-right: 40px;
-   padding-bottom: 5px;
-    left: 140px;
-    bottom: 70px;
-    background-color: yellow;
-    border-radius: 5px;
     
+    display: inline-block;
+    position: relative;
+    background-color: rgb(44, 184, 23);
+    color: white;
+    font-size: 10pt;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 10px;
+    bottom: 80px;
+    left: 100px;
 
 }
 
 .premium{
-
+    display: inline-block;
+    position: relative;
+    background-color: rgb(44, 184, 23);
+    color: white;
+    font-size: 10pt;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    bottom: 80px;
+    left: 160px;
+    
 }
 
   
@@ -57,15 +67,15 @@ h1{
 
 .basico{
     display: inline-block;
-    flex-direction: row;
     margin: 10px;
-    margin-left: 100px;
+    margin-left: 80px;
     margin-bottom: 60px;
     text-align: center;
     border-radius: 10px;
-    padding: 60px;
+    padding: 50px;
     padding-bottom: 60px;
-    background-color: #7053f0;
+    padding-right: 19px;
+    background-color: blanchedalmond;
     position: relative;
 }
 
@@ -73,7 +83,7 @@ h1{
     background-color: rgb(44, 184, 23);
     color: white;
     border: 1px;
-    padding: 5px 30px;
+    padding: 9px 30px;
     border-radius: 10px;
 }
 
@@ -86,9 +96,8 @@ h1{
     border-radius: 10px;
     padding: 60px;
     padding-bottom: 60px;
-
     background-color: blanchedalmond;
-    position: relative;
+    
 
 }
 
@@ -96,16 +105,20 @@ h1{
 .avancado{
     display: inline-block;
     margin: 10px;
-    margin-right: 100px;
+    margin-right: 80px;
     margin-bottom: 60px;
     text-align: center;
     border-radius: 10px;
     padding: 60px;
     padding-bottom: 60px;
     padding-right: 19px;
-
     background-color: blanchedalmond;
-    position: relative;
+    
+
+}
+
+.intermediario, .basico, .avancado ,p{
+    font-size:16pt;
 
 }
 
