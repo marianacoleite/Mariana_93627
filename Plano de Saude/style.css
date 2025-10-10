@@ -34,6 +34,18 @@ h1{
 }
 
 .popular{
+    position: relative;
+    display: inline-block;
+    height: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    left: 210px;
+    bottom: 70px;
+    background-color: rgb(241, 241, 4);
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10pt;
     
     display: inline-block;
     position: relative;
@@ -49,17 +61,18 @@ h1{
 }
 
 .premium{
-    display: inline-block;
     position: relative;
-    background-color: rgb(44, 184, 23);
-    color: white;
+    display: inline-block;
+    height: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    left: 195px;
+    bottom: 70px;
+    background-color: rgb(241, 241, 4);
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 10pt;
-    padding-left: 25px;
-    padding-right: 25px;
-    border-radius: 10px;
-    bottom: 80px;
-    left: 160px;
-    
 }
 
   
@@ -74,8 +87,7 @@ h1{
     border-radius: 10px;
     padding: 50px;
     padding-bottom: 60px;
-    padding-right: 19px;
-    background-color: blanchedalmond;
+    background-color: #f0eff5;
     position: relative;
 }
 
@@ -96,8 +108,8 @@ h1{
     border-radius: 10px;
     padding: 60px;
     padding-bottom: 60px;
-    background-color: blanchedalmond;
-    
+    background-color: #f0eff5;
+    position: relative;
 
 }
 
@@ -112,13 +124,8 @@ h1{
     padding: 60px;
     padding-bottom: 60px;
     padding-right: 19px;
-    background-color: blanchedalmond;
-    
-
-}
-
-.intermediario, .basico, .avancado ,p{
-    font-size:16pt;
+    background-color: #f0eff5;
+    position: relative;
 
 }
 
