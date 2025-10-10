@@ -1,18 +1,89 @@
-.formulario{
-    display: inline-block;
-    align-items: ;
-    padding: 100px 30px;
-    margin-left: 150px;
-    margin-top: 150px;
-    al
-    
-    
+body{
+    background-color:#008F8C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 
 }
 
+.formulario{
+
+    background-color: #d5eeed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+
+h2{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20pt;
+    color: #023535;
+    
+}
+
+
+label{
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12pt;
+    margin: 8px;
+    color: #023535;
+    
+    
+    
+}
+
+input{
+    position: relative;
+    left: 90px;
+    border-radius: 9px;
+    border: 1px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: initial;
+    padding-left: 10px;
+    padding-right: 20px;
+    
+    
+}
+
+button{
+    position: relative;
+    top: 45px;
+    right: 120px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #ddd;
+    background-color: #008F8C;
+    color: aliceblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+
 
 #error{
-    
+
+    position: relative;
+    top: 30px;
+    left: 65px;
+    display: flex;
     color: red;
     padding: 10px;
 }
