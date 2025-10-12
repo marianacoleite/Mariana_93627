@@ -1,0 +1,141 @@
+h1{
+    background-color: rgb(10, 11, 27);
+    padding: 30px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin: 0;
+
+
+}
+
+.text{
+    background-color: rgb(57, 67, 155);
+    text-align: center;
+    padding: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.botao{
+    background-color: rgb(222, 30, 30);
+    color: white;
+    border: 1px;
+    padding: 5px 30px;
+    border-radius: 10px;
+
+}
+
+
+.plano{
+    display: flex;
+    background-color: rgb(245, 247, 243);
+    padding-top: 150px;
+}
+
+.popular{
+    position: relative;
+    display: inline-block;
+    height: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    left: 210px;
+    bottom: 70px;
+    background-color: rgb(241, 241, 4);
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    
+    display: inline-block;
+    position: relative;
+    background-color: rgb(44, 184, 23);
+    color: white;
+    font-size: 10pt;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 10px;
+    bottom: 80px;
+    left: 100px;
+
+}
+
+.premium{
+    position: relative;
+    display: inline-block;
+    height: 45px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    left: 195px;
+    bottom: 70px;
+    background-color: rgb(241, 241, 4);
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+  
+
+
+.basico{
+    display: inline-block;
+    margin: 10px;
+    margin-left: 80px;
+    margin-bottom: 60px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px;
+    padding-bottom: 60px;
+    background-color: #f0eff5;
+    position: relative;
+}
+
+.bt, .bt1, .bt2{
+    background-color: rgb(44, 184, 23);
+    color: white;
+    border: 1px;
+    padding: 9px 30px;
+    border-radius: 10px;
+}
+
+
+.intermediario{
+    display: inline-block;
+    margin: 10px;
+    margin-bottom: 60px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 60px;
+    padding-bottom: 60px;
+    background-color: #f0eff5;
+    position: relative;
+
+}
+
+
+.avancado{
+    display: inline-block;
+    margin: 10px;
+    margin-right: 80px;
+    margin-bottom: 60px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 60px;
+    padding-bottom: 60px;
+    padding-right: 19px;
+    background-color: #f0eff5;
+    position: relative;
+
+}
+
+
+footer{
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7pt;
+}
