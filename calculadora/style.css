@@ -1,0 +1,75 @@
+*{  /*Para zera as configuraçoes do navegador*/
+   margin: 0;   
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{   /*Centralizar no meio da pagina*/
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+.visao{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: azure;
+    border-radius: 15px;
+    color: #FFFFFF;
+
+}
+
+.calculadora{
+    display: inline-block;
+    background-color: #B0D197;
+    padding: 10px 20px;
+    border-radius: 16px;
+    
+}
+
+.b1, .b2, .b3, .soma{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 15px 15px;
+    margin: 5px;
+    position: relative;
+
+}
+.b4, .b5, .b6, .subtracao {
+    background-color: #FFFFFF;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 15px 15px;
+    margin: 5px;
+    position: relative;
+    
+}
+
+.b7, .b8, .b9, .multiplicacao, .divisao{
+    background-color: #FFFFFF;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 15px 15px;
+    margin: 5px;
+    position: relative;
+
+}
+.igual{
+    background-color:#46915C;
+    border-radius: 10px;
+    border: 1px solid #46915C;
+    padding: 15px 70px;
+    margin: 5px;
+    position: relative;
+
+}
+
+
+
+
