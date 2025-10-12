@@ -1,0 +1,227 @@
+body{
+    background-color: rgb(250, 250, 250);
+}
+
+.tabuleiro{
+    background-color: rgb(252, 249, 249);
+    display: block;
+    height: 750px;
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 366px;
+}
+
+.l1{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+.l2{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+}
+
+.l3{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(253, 248, 253);
+    width: 200px;
+    height: 200px;
+
+}
+
+.l4{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+
+}
+
+.l5{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(250, 246, 250);
+    width: 200px;
+    height: 200px;
+    
+}
+
+.l6{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+
+}
+
+.l7{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+}
+
+
+.l8{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(238, 236, 236);
+    width: 200px;
+    height: 200px;
+}
+
+.l9{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+
+}
+
+.l10{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(243, 242, 242);
+    width: 200px;
+    height: 200px;
+
+}
+
+.l11{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.l12{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(248, 245, 245);
+    width: 200px;
+    height: 200px;
+
+}
+
+.l13{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(247, 240, 247);
+    width: 200px;
+    height: 200px;
+
+}
+
+.l14{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.l15{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(240, 236, 240);
+    width: 200px;
+    height: 200px;
+
+}
+
+.l16{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+
+}
+
+.l17{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(247, 244, 247);
+    width: 200px;
+    height: 200px;
+    
+}
+
+.l18{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+
+}
+
+.l19{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.l20{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(241, 238, 238);
+    width: 200px;
+    height: 200px;
+
+}
+
+.l21{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+
+}
+
+.l22{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(253, 252, 252);
+    width: 200px;
+    height: 200px;
+    
+}
+
+.l23{
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+
+}
+
+.l24{
+    display: inline-block;
+    position: relative;
+    background-color: rgb(248, 246, 246);
+    width: 200px;
+    height: 200px;
+
+}
