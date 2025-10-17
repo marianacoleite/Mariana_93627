@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    background-color: #FBF2ED;
+}
+
+.fundo{
+    background-color:#AC99F2;
+    border-radius: 20px;
+    padding-top: 15px;
+    margin-left: 45px;
+    margin-right: 45px;
+    
+}
+
+.resultado{
+    background-color: white;
+    padding: 30px 18px;
+    margin-left: 45px;
+    margin-right: 45px;
+    border-radius: 5px ;
+    
+
+}
+
+.calculadora{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 50px 40px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    
+
+}
+
+button{
+    
+    height: 60px; 
+    width: 90px;  
+    font-size: 24px; 
+    background-color:#D6C2F2;
+    border-radius: 10px;
+    border: #D6C2F2;
+    color:white;
+    font-size: 10pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 3px;
+
+}
+
+
+ .igual{
+    position: relative;
+    padding: 20px 45px;
+    top: 110px;
+    right: 120px;
+    margin-top: 5px;  
+ }
+
+ button:hover{
+    background-color:#731D64 ;
+ }
+
+#zero {
+    position: relative;
+    height: 60px; 
+    width: 195px;  
+    font-size: 24px; 
+    background-color:#240550;
+    border-radius: 10px;
+    border: #D6C2F2;
+    color:white;
+    font-size: 10pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 3px;
+    bottom: 15px;
+    left: 40px;   
+}
+
+#ponto{
+    position: relative;
+    height: 60px; 
+    width: 90px;   
+    font-size: 24px; 
+    background-color:D6C2F2;
+    border-radius: 10px;
+    border: #D6C2F2;
+    color:white;
+    font-size: 10pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10px;
+    bottom: 15px;
+    left: 30px;   
+}
