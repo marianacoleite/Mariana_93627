@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CNPJ/style.css">
+    <title>CNPJ</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Consulta de CNPJ</h2>
+        <form id="cnpjForm">
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" maxlength="14" required>
+
+            <button type="button" onclick="consultarCnpj()">Consultar</button>
+        </form>
+        <div id="resultado">
+            <p><strong>Porte:</strong> <span id="porte"></span></p>
+            <p><strong>Razao Social:</strong> <span id="razao"></span></p> 
+            <p><strong>Nome Fantasia:</strong> <span id="fantasia"></span></p>
+            <p><strong>Estado:</strong> <span id="estado"></span></p>
+        </div>
+    </div>
+
+    <script src="/CNPJ/script.js"></script>
+</body>
+</html>
