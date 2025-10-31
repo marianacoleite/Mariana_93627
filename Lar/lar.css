@@ -182,14 +182,16 @@ h3{
 .formulario{
     padding-top: 20px;
     text-align: center;
+    justify-content: center;
     align-items: center;
     display: flex;
 }
 
 .forb p {
     position: relative;
-    
-    color: black;
+    left: 50px;
+    bottom: 100px;
+    color: rgb(38, 105, 163);
     padding: 10px;
 }
 
@@ -213,10 +215,45 @@ input{
     
 }
 
+
+.b1{
+    margin-top: 18px;
+    padding: 10px 20px;
+    margin-right: 180px;
+    background-color: rgb(38, 105, 163);
+    color: #ffffff;
+    border: 1px;
+    border-radius: 5px;
+}
+
+.b2{
+    position: relative;
+    margin-top: 18px;
+    padding: 9px 50px;
+    margin-right: 180px;
+    background-color: rgb(38, 105, 163);
+    color: #ffffff;
+    border: 1px;
+    border-radius: 5px;
+    left: 120px;
+    bottom: 100px;
+    
+}
+
+.what{
+    width: 25px;
+    
+    
+
+}
+
+
+
 footer{
     background-color:#44749d;
     padding: 30px 300px;
     text-align: center;
     font-size: 12pt;
     color: #ffffff ;
+    
 }
