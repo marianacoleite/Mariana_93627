@@ -1,0 +1,108 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+
+
+}
+
+header{
+    background-color: black;
+    padding: 50px 40px;
+    margin-top: 0;
+}
+
+h3 {
+color: #b40909;
+font-size: 15px;
+}
+
+h2{
+    font-size: 30px;
+    color: #eef7f6;
+    align-items: center;
+    text-align: center;
+}
+
+/*container vermelho*/
+.containerv{
+    background-color: #b40909;
+    padding: 10px 10px;
+    border-radius: 10px;
+
+}
+
+ul{
+    display: flex;
+    
+}
+
+li{
+    
+    color: #eef7f6;
+    list-style: none;
+    margin-left: 10px;
+
+}
+
+h4{
+    display: block;
+    margin-bottom: 2px;
+    margin-top: 3px;
+    margin-left: 350px;
+    font-size: 15pt;
+    color: #cacecd; 
+}
+
+main{
+    background-color: antiquewhite;
+    padding-bottom: 300px;
+
+}
+
+.c1{
+
+   background-color: #cacecd;
+   padding: 50px 50px;
+   border-radius: 20px;
+}
+
+.c2{
+
+    background-color: #cacecd;
+    padding: 50px 50px;
+    border-radius: 20px;
+}
+
+.c3{
+
+    background-color: #cacecd;
+    padding: 50px 50px;
+    border-radius: 20px;
+    
+}
+
+section{
+   padding-top: 30px;
+   display: flex;
+   
+}
+
+/*Roda Pe*/
+footer{
+    background-color: black;
+    padding: 30px;
+
+}
+
+.rodape{
+    background-color: #b40909;
+    padding: 10px 15px;
+    border-radius: 20px;
+    
+}
+
+ul{
+
+}
