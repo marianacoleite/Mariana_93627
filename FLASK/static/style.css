@@ -3,31 +3,36 @@ body {
     margin: 0;
     height: 100vh;
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 
 }
 
 header{
-    background-color: black;
+    background-color: #295773;
     padding: 50px 40px;
     margin-top: 0;
 }
 
 h3 {
-color: #b40909;
+color: white;
 font-size: 15px;
+}
+
+a{
+    font-size: 10pt;
 }
 
 h2{
     font-size: 30px;
-    color: #eef7f6;
+    color: white;
     align-items: center;
     text-align: center;
 }
 
 /*container vermelho*/
 .containerv{
-    background-color: #b40909;
+    background-color:#C8D7E4;
     padding: 10px 10px;
     border-radius: 10px;
 
@@ -40,64 +45,102 @@ ul{
 
 li{
     
-    color: #eef7f6;
+    color: black;
     list-style: none;
     margin-left: 10px;
 
 }
 
-h4{
+.titulop{
     display: block;
     margin-bottom: 2px;
     margin-top: 3px;
-    margin-left: 350px;
+    margin-left: 200px;
     font-size: 15pt;
-    color: #cacecd; 
+    color: black;
 }
 
+/*section */
 main{
-    background-color: antiquewhite;
-    padding-bottom: 300px;
+    
+    padding-bottom: 100px;
+    text-align: center;
 
+}
+
+h4{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    justify-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .c1{
 
-   background-color: #cacecd;
-   padding: 50px 50px;
+   background-color:#9BC0D9;
+   margin: 80px 6px ;
    border-radius: 20px;
+   margin-left: 100px;
+   
+   
 }
 
 .c2{
 
-    background-color: #cacecd;
-    padding: 50px 50px;
+    background-color:#9BC0D9;
+    margin: 80px 6px ;
     border-radius: 20px;
 }
 
 .c3{
-
-    background-color: #cacecd;
-    padding: 50px 50px;
-    border-radius: 20px;
+    display: inline-block;
+    background-color: #9BC0D9;
+    margin: 80px 6px ;
+    margin-right: 150px;
+    border-radius: 20px;  
+    text-align: center;
     
 }
 
 section{
-   padding-top: 30px;
-   display: flex;
+
+    background-color: #fcfcfc;
+    display: flex;
+    
+    
    
 }
 
+.list , .list2 , .list3{
+    align-items: center;
+    display: inline-block;
+    padding: 10px 8px;
+    background-color:#022859;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: #fcfcfc;
+}
+
+
+
+
+
+
 /*Roda Pe*/
 footer{
-    background-color: black;
+    background-color: #295773;
     padding: 30px;
 
 }
 
 .rodape{
-    background-color: #b40909;
+    background-color:#C8D7E4;
     padding: 10px 15px;
     border-radius: 20px;
     

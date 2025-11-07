@@ -8,6 +8,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():return render_template('index.html')
 
+@app.route('/agora')
+def agora():return render_template('agora.html')
+
+
 
 
 # API simples
