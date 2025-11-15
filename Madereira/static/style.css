@@ -7,6 +7,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-repeat: no-repeat;      /* não repetir */
+    background-position: center center;/* centralizada */
+    background-size: cover;            /* cobre a tela inteira */
+    background-attachment: fixed;      /* opcional: efeito de fundo “fixo” */
+    background-image: url("/Madereira/static/img/1239109-3840x2160-desktop-4k-green-forest-wallpaper-photo.jpg");
 }
 
 /* CAIXA CENTRAL */
@@ -83,7 +88,7 @@ body {
     margin-top: 20px;
     width: 60%;
     padding: 12px;
-    background: #203500;
+    background-color: #658C11;
     color: white;
     border: none;
     border-radius: 20px;
@@ -92,7 +97,7 @@ body {
 }
 
 .btn-login:hover {
-    background: #042b15;
+    background: #275321;
 }
 
 #erro {
@@ -103,7 +108,7 @@ body {
 /* LADO DIREITO COM A IMAGEM */
 .right-box {
     width: 50%;
-    background-image: url("/static/img/madeira_rodonda.webp");
+    background-image: url("/Madereira/static/img/madeira_rodonda.webp");
     background-size: cover;
     background-position: center;
     position: relative;
