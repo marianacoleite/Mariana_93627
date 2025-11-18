@@ -4,72 +4,440 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Corte Verde - Cadastro de Produtos</title>
-  <link rel="stylesheet" href="/Madereira/static/lista.css" />
+  <link rel="stylesheet" href="{{url_for('static',filename='lista.css')}}">
 </head>
+
+<style>
+ /* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("{{ url_for('static', filename='img/1239109-3840x2160-desktop-4k-green-forest-wallpaper-photo.jpg') }}"); /* sua imagem de fundo geral */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.appbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* Container branco com bordas */
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  padding: 14px 28px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* sombra leve igual do exemplo */
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* LOGO */
+.logo-nav {
+  height: 44px;
+  width: 100%;
+  display: block;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* links minimalistas */
+.nav-link {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  padding: 6px 2px;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+/* linha embaixo no hover */
+.nav-link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #1a1a1a;
+  opacity: 0;
+  transition: width 0.25s ease, opacity 0.25s ease;
+}
+
+/* link ativo */
+.nav-link.active {
+  color: #1a1a1a;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+
+
+/* PAGE WRAPPER */
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  padding-bottom: 500px;
+}
+
+/* CARD PRINCIPAL */
+.products-card {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 40px #073506;
+}
+
+.card-inner {
+  display: flex;
+  min-height: 420px;
+  background-image: url("{{ url_for('static', filename='img/bg-madeira.jpg') }}"); /* fundo de madeira para o card */
+  background-size: cover;
+  background-position: center;
+}
+
+/* LADO ESQUERDO COM LOGO */
+.card-left {
+  width: 30%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-left {
+  max-width: 160px;
+}
+
+/* LADO DIREITO (CONTEÚDO) */
+.card-right {
+  flex: 1;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(241, 245, 249, 0.95)
+  );
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* HEADER DA LISTA (barra com ID, Nome, etc) */
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #00530a;
+  color: #e2f3e9;
+  padding: 14px 18px;
+  border-radius: 12px;
+}
+
+.titulo-card {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+
+/* TABELA */
+.table-wrapper {
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 320px;
+  border: 1px solid #d1d5db;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead {
+  background: #e5f2e9;
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #0b1f10;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+tbody tr:hover {
+  background: #e5f3ec;
+}
+
+tbody td {
+  padding: 8px 10px;
+}
+
+/* BOTÕES GERAIS */
+.btn-primary,
+.btn-secondary {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #658C11;
+  color: #f9fafb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+  background: #275321;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.modal-overlay.aberto {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+  background: #f9fafb;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 14px 18px;
+  background: #275321;
+  color: #e5f3ea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: #e5f3ea;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #111827;
+}
+
+.form-group input {
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  padding: 8px 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #15803d;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.35);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .card-inner {
+    flex-direction: column;
+  }
+
+  .card-left {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .logo-left {
+    max-width: 120px;
+  }
+
+  .list-header {
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+  }
+
+  .list-header .btn-primary {
+    grid-column: 1 / -1;
+    justify-self: flex-end;
+    margin-top: 8px;
+  }
+}
+
+
+.footer{
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 8pt;
+  border-radius: 5px;
+}
+
+
+
+</style>
 <body>
 
-
-
+  <!-- NAVBAR -->
   <header class="appbar">
-  <div class="nav-container">
+    <div class="nav-container">
 
-    <!-- LOGO -->
-    <div class="nav-left">
-      <img src="/Madereira/static/img/ChatGPT Image 14 de nov. de 2025, 10_54_23.png" alt="Corte Verde" class="logo-nav">
+      <!-- LOGO -->
+      <div class="nav-left">
+        <img src="{{ url_for('static', filename='img/corte.jpg') }}" 
+             alt="Corte Verde" class="logo-nav">
+      </div>
+
+      <!-- MENU -->
+      <nav class="nav-menu">
+        <a href="#" class="nav-link active">Cadastro</a>
+        <a href="#" class="nav-link">Produtos</a>
+        <a href="#" class="nav-link">Pedidos</a>
+        <a href="#" class="nav-link">User: Admin</a>
+      </nav>
+
     </div>
+  </header>
 
-    <!-- MENU -->
-    <nav class="nav-menu">
-      <a href="#" class="nav-link active">Cadastro</a>
-      <a href="#" class="nav-link">Produtos</a>
-      <a href="#" class="nav-link">Pedidos</a>
-      <a href="#" class="nav-link">User 056</a>
-    </nav>
-
-  </div>
-</header>
-
-
-
-  <!-- CONTAINER PRINCIPAL -->
+  <!-- CONTEÚDO -->
   <main class="page-wrapper">
     <section class="products-card">
-      <!-- Fundo com imagem e logo à esquerda -->
-      
 
-        <div class="card-right">
-          <!-- Barra de colunas + botão -->
-            <div class="list-header">
-                <h3 class="titulo-card">Cadastro de Produtos</h3>
+      <div class="card-right">
 
-                <button id="btnNovoProduto" class="btn-primary">
-                    + Novo produto
-                </button>
-            </div>
+        <!-- Header -->
+        <div class="list-header">
+          <h3 class="titulo-card">Cadastro de Produtos</h3>
 
-
-          <!-- Tabela gerada pelo cadastro -->
-          <div class="table-wrapper">
-            <table id="tabelaProdutos">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Nome</th>
-                  <th>Quantidade</th>
-                  <th>Valor (R$)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- linhas geradas via JS -->
-              </tbody>
-            </table>
-          </div>
+          <button id="btnNovoProduto" class="btn-primary">
+            + Novo produto
+          </button>
         </div>
+
+        <!-- Tabela -->
+        <div class="table-wrapper">
+          <table id="tabelaProdutos">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Valor (R$)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- preenchido pelo script.js -->
+            </tbody>
+          </table>
+        </div>
+
       </div>
+
     </section>
   </main>
 
-  <!-- MODAL DE CADASTRO -->
+  <!-- MODAL -->
   <div class="modal-overlay" id="produtoModal">
     <div class="modal">
       <div class="modal-header">
@@ -90,13 +458,7 @@
 
         <div class="form-group">
           <label for="valorProduto">Valor (R$)</label>
-          <input
-            type="number"
-            id="valorProduto"
-            min="0"
-            step="0.01"
-            required
-          />
+          <input type="number" id="valorProduto" min="0" step="0.01" required />
         </div>
 
         <div class="modal-actions">
@@ -111,12 +473,13 @@
     </div>
   </div>
 
-
+  <!-- FOOTER -->
   <footer class="footer">
-        <p>© 2025 Corte Verde. Todos os direitos reservados.</p>
-    </footer>
+    <p>© 2025 Corte Verde. Todos os direitos reservados.</p>
+  </footer>
 
+  <!-- SCRIPT DA LISTA -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 
-  <script src="/Madereira/static/script.js"></script>
 </body>
 </html>

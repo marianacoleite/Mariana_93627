@@ -11,8 +11,8 @@ body {
     background-position: center center;/* centralizada */
     background-size: cover;            /* cobre a tela inteira */
     background-attachment: fixed;      /* opcional: efeito de fundo “fixo” */
-    background-image: url("/Madereira/static/img/1239109-3840x2160-desktop-4k-green-forest-wallpaper-photo.jpg");
-}
+     background-image: url("{{ url_for('static', filename='img/1239109-3840x2160-desktop-4k-green-forest-wallpaper-photo.jpg') }}");
+} 
 
 /* CAIXA CENTRAL */
 .container {

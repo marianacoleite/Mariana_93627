@@ -271,7 +271,7 @@ tbody td {
 
 .modal-header {
   padding: 14px 18px;
-  background: #0f210f;
+  background: #275321;
   color: #e5f3ea;
   display: flex;
   align-items: center;
@@ -357,4 +357,9 @@ tbody td {
 }
 
 
-
+.footer{
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 8pt;
+  border-radius: 5px;
+}

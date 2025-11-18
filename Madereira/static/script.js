@@ -1,8 +1,4 @@
-// Array de produtos em memória
-let produtos = [];
-let proximoId = 1;
-
-// Referências aos elementos
+// REFERÊNCIAS
 const modal = document.getElementById("produtoModal");
 const btnNovoProduto = document.getElementById("btnNovoProduto");
 const btnFecharModal = document.getElementById("fecharModal");
@@ -10,7 +6,10 @@ const btnCancelarModal = document.getElementById("cancelarModal");
 const formProduto = document.getElementById("formProduto");
 const tabelaBody = document.querySelector("#tabelaProdutos tbody");
 
-// ---- FUNÇÕES DE MODAL ----
+
+// ==============================
+// MODAL
+// ==============================
 function abrirModal() {
   modal.classList.add("aberto");
 }
@@ -20,58 +19,59 @@ function fecharModal() {
   formProduto.reset();
 }
 
-// ---- FUNÇÃO PARA RENDERIZAR A TABELA ----
-function renderizarTabela() {
-  tabelaBody.innerHTML = "";
-
-  produtos.forEach((produto) => {
-    const tr = document.createElement("tr");
-
-    const tdId = document.createElement("td");
-    tdId.textContent = produto.id;
-
-    const tdNome = document.createElement("td");
-    tdNome.textContent = produto.nome;
-
-    const tdQtd = document.createElement("td");
-    tdQtd.textContent = produto.quantidade;
-
-    const tdValor = document.createElement("td");
-    tdValor.textContent = produto.valor.toLocaleString("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    });
-
-    tr.appendChild(tdId);
-    tr.appendChild(tdNome);
-    tr.appendChild(tdQtd);
-    tr.appendChild(tdValor);
-
-    tabelaBody.appendChild(tr);
-  });
-}
-
-// ---- EVENTOS ----
 btnNovoProduto.addEventListener("click", abrirModal);
-
 btnFecharModal.addEventListener("click", fecharModal);
 btnCancelarModal.addEventListener("click", fecharModal);
 
-// Fecha modal clicando fora
 modal.addEventListener("click", (event) => {
   if (event.target === modal) {
     fecharModal();
   }
 });
 
-// Submit do formulário
-formProduto.addEventListener("submit", (event) => {
+
+// ==============================
+// CARREGAR PRODUTOS DO BANCO
+// ==============================
+async function carregarProdutos() {
+  tabelaBody.innerHTML = "";
+
+  try {
+    const resposta = await fetch("/api/produtos");
+    if (!resposta.ok) throw new Error("Erro ao carregar");
+
+    const produtos = await resposta.json();
+
+    produtos.forEach((produto) => {
+      const tr = document.createElement("tr");
+
+      tr.innerHTML = `
+        <td>${produto.id}</td>
+        <td>${produto.nome}</td>
+        <td>${produto.quantidade}</td>
+        <td>${Number(produto.valor).toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL"
+        })}</td>
+      `;
+
+      tabelaBody.appendChild(tr);
+    });
+  } catch (err) {
+    console.error(err);
+    alert("Erro ao carregar produtos.");
+  }
+}
+
+
+// ==============================
+// SALVAR PRODUTO NO BANCO
+// ==============================
+formProduto.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const nome = document.getElementById("nomeProduto").value.trim();
-  const quantidade = Number(
-    document.getElementById("quantidadeProduto").value
-  );
+  const quantidade = Number(document.getElementById("quantidadeProduto").value);
   const valor = Number(document.getElementById("valorProduto").value);
 
   if (!nome || quantidade <= 0 || valor < 0) {
@@ -79,14 +79,28 @@ formProduto.addEventListener("submit", (event) => {
     return;
   }
 
-  const novoProduto = {
-    id: proximoId++,
-    nome,
-    quantidade,
-    valor,
-  };
+  const novoProduto = { nome, quantidade, valor };
 
-  produtos.push(novoProduto);
-  renderizarTabela();
-  fecharModal();
+  try {
+    const resposta = await fetch("/api/produtos", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(novoProduto),
+    });
+
+    if (!resposta.ok) throw new Error("Erro ao salvar");
+
+    fecharModal();
+    carregarProdutos();
+
+  } catch (err) {
+    console.error(err);
+    alert("Erro ao salvar o produto.");
+  }
 });
+
+
+// ==============================
+// INICIAR TABELA
+// ==============================
+window.addEventListener("DOMContentLoaded", carregarProdutos);
